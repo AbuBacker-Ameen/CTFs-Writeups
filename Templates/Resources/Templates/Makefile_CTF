@@ -1,0 +1,44 @@
+# Makefile for automating report generation with AutoLaTeX
+
+# Variables
+MD_DIR=Sections
+TEX_DIR=Exported_TeX_Files/Sections
+EXPORT_DIR=Exported_TeX_Files
+BUILD_DIR=Build
+OUTPUT=Final_Report.pdf
+
+.PHONY: all clean
+
+all: $(OUTPUT)
+
+$(OUTPUT): compile_latex
+
+compile_latex: convert_md_tex
+	@echo "Compiling LaTeX document with AutoLaTeX..."
+	@mkdir -p $(BUILD_DIR)
+	pdflatex -shell-escape -output-directory=$(BUILD_DIR) Final_CTF_Report.tex
+	pdflatex -shell-escape -output-directory=$(BUILD_DIR) Final_CTF_Report.tex
+	pdflatex -shell-escape -output-directory=$(BUILD_DIR) Final_CTF_Report.tex
+
+convert_md_tex:
+	@echo "Converting Markdown files to TeX..."
+	@mkdir -p $(TEX_DIR)
+	# Convert main sections
+	@for file in $(MD_DIR)/*.md; do \
+		filename=$$(basename $$file .md); \
+		pandoc --listings $$file -o $(TEX_DIR)/$$filename.tex; \
+	done
+
+
+clean:
+	@echo "Cleaning up..."
+	rm -rf $(BUILD_DIR)/*.aux
+	rm -rf $(BUILD_DIR)/*.bbl
+	rm -rf $(BUILD_DIR)/*.toc
+	rm -rf $(BUILD_DIR)/*.blg
+	rm -rf $(BUILD_DIR)/*.lof
+	rm -rf $(BUILD_DIR)/*.lot
+	rm -rf $(BUILD_DIR)/*.out
+	rm -rf $(BUILD_DIR)/*.log
+	rm -rf _minted-Final_Report
+	rm -rf Exported_TeX_Files

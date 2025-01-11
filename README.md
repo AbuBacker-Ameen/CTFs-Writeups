@@ -1,6 +1,6 @@
 # CTF Write-Ups and Templates
 
-Welcome to my CTF Write-Ups repository. This repo showcases the **final PDF reports** for my completed CTF challenges, organized by platform (**if I'm not too lazy to upload them** 😊). It also includes the **template** and **script** I use to generate these reports locally.
+Welcome to my CTF Write-Ups repository as will CTF Write-Ups guide. This repo showcases the **final PDF reports** for my completed CTF challenges, organized by platform (**if I'm not too lazy to upload them** 😊). It also includes the **template** and **script** I use to generate these reports locally.
 
 ---
 

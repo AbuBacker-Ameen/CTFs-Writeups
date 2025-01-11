@@ -1,0 +1,111 @@
+% Final_Report.tex
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec} % Commented out to resolve TOC issue
+\usepackage{minted}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\usepackage{hyperref} % Loaded after other packages
+
+\AddToHook{cmd/section/before}{\Needspace{45\baselineskip}} % To have new page after an section
+
+\geometry{margin=1in}
+
+\graphicspath{{Attachments/images/}}
+\setkeys{Gin}{width=0.8\textwidth}
+
+% Save the original \includegraphics command
+\let\origincludegraphics\includegraphics
+
+% Redefine \includegraphics to include line breaks
+\renewcommand{\includegraphics}[2][]{%
+  \par\medskip\noindent%
+  \origincludegraphics[#1]{#2}%
+  \par\medskip%
+}
+
+
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \lhead{ }
+  \rhead{\thepage}
+}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter}{2pc}{} 
+\titlespacing*{\chapter}{2pt}{-7pt}{8pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+\setcounter{tocdepth}{2} % Include up to subsections in TOC
+
+\lstset{
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    breaklines=true,
+}
+
+\begin{document}
+
+
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    %\includegraphics[width=0.4\textwidth]{logo.png}\par\vspace{1cm}
+    {\scshape\LARGE CTF Challenge \par}
+    \vspace{1.5cm}
+    {\huge\bfseries {{Platform_Name}}: {{Challenge_Name}}\par}
+    \vspace{2cm}
+    {\Large\itshape Name \par}
+    {\Large\href \par}
+    \vfill
+    {\large \today \par}
+
+\end{titlepage}
+  
+
+\tableofcontents
+\newpage
+
+% Include sections with \chapter{}
+\chapter{CTF Description}
+\input{../Exported_TeX_Files/Sections/01_Challenge_Description.md.tex}
+
+\newpage
+
+\chapter{Enumeration}
+\input{../Exported_TeX_Files/Sections/02_Enumeration.md.tex}
+
+\newpage
+
+\chapter{Exploitation}
+\input{../Exported_TeX_Files/Sections/03_Exploitation.md.tex}
+
+\newpage
+
+\chapter{Post Exploitation}
+\input{../Exported_TeX_Files/Sections/04_Post_Exploitation.md.tex}
+
+\newpage
+
+\chapter{Solution}
+\input{../Exported_TeX_Files/Sections/05_Solution.md.tex}
+
+
+\end{document}
