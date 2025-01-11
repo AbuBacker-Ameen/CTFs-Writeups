@@ -31,3 +31,5 @@ By following the instructions here, you’ll:
 1. Automate folder creation for each new challenge.
 2. Fill in Markdown files with all your notes.
 3. Convert everything into a tidy PDF using LaTeX, Pandoc, and a bit of (unnecessarily fun) complexity.
+
+# not finished yet .................
