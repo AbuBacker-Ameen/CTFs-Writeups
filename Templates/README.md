@@ -32,4 +32,36 @@ By following the instructions here, you’ll:
 2. Fill in Markdown files with all your notes.
 3. Convert everything into a tidy PDF using LaTeX, Pandoc, and a bit of (unnecessarily fun) complexity.
 
+---
+
+## Prerequisites
+
+- **Pandoc**  
+  To convert your Markdown notes into `.tex` files.  
+  \[Install command on Ubuntu-based systems\]:  
+  ```bash
+  sudo apt-get update
+  sudo apt-get install pandoc
+  ```
+
+- **LaTeX Distribution** (e.g., TeX Live)  
+  Required to compile `.tex` to PDF.  
+  ```bash
+  sudo apt-get install texlive-full
+  ```
+  (Exact package names might vary by distro.)
+
+- **minted** & **Pygments** (already included in `texlive-full`, but if you want separate):  
+  ```bash
+  sudo apt-get install python3-pygments
+  ```
+  This ensures syntax highlighting in code blocks if used in LaTeX.
+
+- **Bash**  
+  For running the `init_ctf_writeup.sh` script.
+
+- **Obsidian** (Highly Recommended, but optional)  
+  Great for storing and linking your Markdown files. If you enjoy linking your notes ([[like so]]), Obsidian is perfect.
+
+
 # not finished yet .................
