@@ -1,6 +1,6 @@
 # Templates: CTF Write-Ups & Workflow
 
-**Welcome!** This folder contains the essential bits for creating, writing, and compiling your CTF challenges into polished PDF reports. If you’re wondering why it’s so elaborate—well, some of us just love to complicate things (\*cough\* me \*cough\*). But hey, the final results look neat, so who’s complaining?
+**Welcome!** This folder contains the essential bits for creating, writing, and compiling your CTF challenges into polished PDF reports. If you’re wondering why it’s so elaborate—well, some of us just love to complicate things ( me 🙋‍♂️). But hey, the final results look neat, so who’s complaining?
 
 ## Table of Contents
 1. [Overview](#overview)
