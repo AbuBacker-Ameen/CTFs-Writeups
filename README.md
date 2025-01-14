@@ -11,8 +11,7 @@ CTF-Repo/
 ├── README.md
 ├── Templates/
 │   ├── README.md
-│   ├── init_ctf_writeup.sh
-│   └── Final_CTF_Report.tex
+│   ├── Resources/
 └── PDFs/
     ├── HackTheBox/
     │   ├── Challenge1.pdf
